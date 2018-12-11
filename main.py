@@ -3,4 +3,4 @@
 
 from scrapy.cmdline import execute
 
-execute(['scrapy', 'crawl', 'doubanmovie'])
+execute(['scrapy', 'crawl', 'doubanmovie', '-o', 'doubanmovie.json'])

@@ -3,14 +3,18 @@
 import os
 import urllib.request
 from twisted.enterprise import adbapi
-from pymongo import MongoClient
-import MySQLdb.cursors
+#from pymongo import MongoClient
+#import MySQLdb.cursors
 
 from firsttest import settings
 from firsttest.items import DoubanTopMoviesItem
 
-# 自定义方法下载图片
 class FirsttestPipeline(object):
+    def process_item(self, item, spider):
+        return item
+
+# 自定义方法下载图片
+'''class FirsttestPipeline(object):
     # 电影封面命名：序号加电影名
     def _createmovieImageName(self, item):
         lengh = len(item['topid'])
@@ -123,3 +127,4 @@ class MyImagesPipeline(ImagesPipeline):
             raise DropItem("Item contains no images")
         # item['image_paths'] = image_paths
         return item
+'''

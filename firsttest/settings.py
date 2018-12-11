@@ -25,9 +25,9 @@ DOWNLOADER_MIDDLEWARES = {
 }
 
 ITEM_PIPELINES = {
-    # 'firsttest.pipelines.FirsttestPipeline': 300,
+    'firsttest.pipelines.FirsttestPipeline': 300,
     # 'firsttest.pipelines.MyImagesPipeline': 400,
-    'firsttest.pipelines.DoubanmoviePipeline':600,
+    # 'firsttest.pipelines.DoubanmoviePipeline':600,
     # 'firsttest.pipelines.MongoDBPipeline':900,
 }
 
